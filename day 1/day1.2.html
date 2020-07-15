@@ -1,0 +1,55 @@
+DIFFERENCE BETWEEN VAR, LET AND CONST
+
+[1]var declarations are globally scoped or function scoped while let and const are block scoped.
+ VAR : var greeter = "hey hi";
+    
+       function newFunction()
+        {
+       var hello = "hello";
+        }
+
+LET :   let greeting = "say Hi";
+        let times = 4;
+
+        if (times > 3)
+         {
+        let hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+        }
+        console.log(hello) // hello is not defined 
+
+CONST : {
+        const abc="prakhar";    
+        console.log(abc);
+        }
+
+[2]var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+ VAR : var greeter = "hey hi";          //ALLOWED
+       var greeter = "say Hello instead";
+
+       var greeter = "hey hi";
+       greeter = "say Hello instead";   //ALLOWED
+
+LET :  let greeting = "say Hi";         //ALLOWED
+       greeting = "say Hello instead";   
+
+       let greeting = "say Hi";
+       let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+
+CONST : const greeting = "say Hi";
+        greeting = "say Hello instead";// error: Assignment to constant variable.
+
+        const greeting = "say Hi";
+    const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
+
+[3]They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
+ VAR :  console.log (greeter);
+        var greeter = "say hello"
+      IS INTERPRETED AS 
+        var greeter;
+        console.log(greeter); // greeter is undefined
+        greeter = "say hello"    
+
+LET : JUST LIKE VAR, EXCEPT IT'S NOT INITIALIZED.
+
+[4]While var and let can be declared without being initialized, const must be initialized during declaration.

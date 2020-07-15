@@ -1,0 +1,51 @@
+[1]console.log()
+ it can print any output to the console, irrespective of the variable type.
+ Ex: console.log('prakhar');
+     console.log(729);
+
+[2]console.error()
+ used to log error message to the console, highlighted in red color.
+ Ex: console.error('an error occured');
+ 
+[3]console.warn()
+ used to log warning message to the console, highlighted in yellow color.
+ Ex: console.warn('Warning!');
+ 
+[4]console.clear()
+ used to clear the console.
+ Ex: console.clear();
+
+[5]console.time() and console.timeEnd()
+ used to indicate the time spent by a block of code, function,etc.
+ it only needs the same label for time() and timeEnd() method.
+ Ex: console.time('pra');
+ let fun =  function(){ 
+    console.log('fun is running'); 
+    { 
+ let fun2 = function(){ 
+    console.log('fun2 is running..'); 
+    } 
+ fun(); 
+ fun2();  
+ console.timeEnd('pra');
+
+[6]console.table()
+ used to print a table inside the console, given that input is an array or
+ an object. 
+ Ex: console.table({'p':1, 'k':2});
+
+[7]console.count()
+ used to count the number that the function hit by this counting method.
+ Ex: for(let i=0;i<5;i++)
+     {
+         console.count(i);
+     }
+ 
+[8]console.group and console.groupEnd()
+ used to group contents in a seperate block. it uses the same label in the 
+ group() and groupEnd() method.
+ Ex: console.group('prakhar'); 
+ console.warn('warning!'); 
+ console.error('error here'); 
+ console.log('ojha'); 
+console.groupEnd('prakhar'); 
