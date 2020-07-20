@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cmd=prompt("which operation do you want to perform?");
+// addition
+if(cmd=="addition"){
+let num1= prompt("Num1:");
+let num2= prompt("Num2:");
+let res= +num1 + +num2;
+console.log(`the addition result is ${res}`);
+}
+// subtraction
+if(cmd=="subtraction"){
+    let num1= prompt("Num1:");
+    let num2= prompt("Num2:");
+    let res= +num1 - +num2;
+    console.log(`the subtraction result is ${res}`);
+}
+// multiplication
+if(cmd=="multiplication"){
+    let num1= prompt("Num1:");
+    let num2= prompt("Num2:");
+    let res= +num1 * +num2;
+    console.log(`the multiplication result is ${res}`);
+}
+// division
+if(cmd=="division"){
+    let num1= +prompt("Num1:");
+    let num2= +prompt("Num2:");
+    let res= num1 / num2;
+    console.log(`the division result is ${res}`);
+}
+// square root
+if(cmd=="square root"){
+    let num= prompt("Num:");
+    let res=Math.sqrt(num)
+    console.log(`the square root is ${res}`);
+}
+// percentage
+if(cmd=="percentage"){
+    let num1= +prompt("how much percentage?");
+    let num2= +prompt("percentage of which number?");
+    let res= num1/100 * num2;
+    console.log(`the result is ${res}`);
+}
+    </script>
+</body>
+</html>

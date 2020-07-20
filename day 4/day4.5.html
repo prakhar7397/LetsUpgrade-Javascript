@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sales= +prompt("enter the sales value");
+if(sales>0 && sales<=5000){
+    console.log("commision earned is=",0.02*sales);
+}
+if(sales>=5001 && sales<=10000){
+    console.log("commision earned is=",0.05*sales);
+}
+if(sales>=10001 && sales<=20000){
+    console.log("commision earned is=",0.07*sales);
+}
+if(sales>20000){
+    console.log("commision earned is=",0.1*sales);
+}
+    </script>
+</body>
+</html>
