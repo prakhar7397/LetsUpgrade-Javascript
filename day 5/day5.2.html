@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User{
+    constructor(name,age,email){
+        this.name=name;
+        this.age=age;
+        this.email=email;
+        this.courses=[];
+    }
+    login(){
+        console.log(`${this.name} has logged in`)
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`)
+        return this;
+    }
+}
+
+class Moderator extends User{
+    constructor(name,age,email,Coins){
+super(name,age,email)
+this.Coins=0;
+    }
+    addCoins(){
+this.Coins++
+console.log(`${this.name} has ${this.Coins} coins`)
+    }
+    removeCoins(){
+this.Coins--
+console.log(`${this.name} has ${this.Coins} coins`)
+}
+}
+
+class Admin extends Moderator{
+    constructor(name,age,email){
+        super(name,age,email)
+    }
+    addCourse(user,course){
+        user.courses.push(course);
+        console.log(user)
+    }
+deleteCourse(user,course){
+    user.courses.pop(course)
+    console.log(user)
+}
+}
+let user= new User('rio',20,'r@gmail.com')
+let mod= new Moderator('berlin',30,'b@gmail.com')
+let admin= new Admin('tokyo',23,'t@gmail.com') 
+let users= [user,mod,admin]
+users.forEach(el=>{
+    console.log(el);
+})
+admin.addCourse(user,'javascript')
+admin.addCourse(user,'python')
+admin.deleteCourse(user,'python')
+</script>
+</body>
+</html>
